@@ -35,18 +35,26 @@ from $2$ to $n / 2$. That eliminates all computations from $n / 2$ to
 $n - 1$, which can be a nice time savings for large $n$.
 
 We can actually do even better than iterating from $2$ to $n / 2$ for
-potential divisors. The trial division algorithm says we can actually stop
-looking for potential divisors once we get to $\sqrt n$. The reduction
-from $n / 2$ to $\sqrt n$ is an exponential time savings and becomes very
-significant for large $n$.
+potential divisors. The <em>trial division</em> algorithm says we can
+actually stop looking for potential divisors once we get to $\sqrt n$.
+The reduction from $n / 2$ to $\sqrt n$ is an exponential time savings
+and becomes very significant for large $n$.
 
-Additionally, no computations are done for $n < 4$. Any value less than
-$4$ automatically returns a `true` value, so computations start only for
+No computations are done for $n < 4$, though this is a virtually
+meaningless reduction in processing time. Any value less than $4$
+automatically returns a `true` value, so computations start only for
 values greater than $3$.
 
 ## Future possibilities
 
-* Maybe provide support for determining prime values for `long` numeric
-types, too, im addition to the now supported `int` numeric type.
-* More optimizations on the algorithm may be implemented in the future,
-but are not yet identified.
+* In addition to determining prime values for `int` values, expand the
+API to include determining primality for other numeric types such as:
+    * `long`
+    * `BigInteger`
+* More optimizations on the primality test algorithm may be implemented
+in the future, but are not yet identified. Future development might
+explore algorithms other than the <em>trial division</em> algorithm
+implemented in the initial release of this project.
+    * [Miller–Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
+    * [AKS primality test](https://en.wikipedia.org/wiki/AKS_primality_test)
+    * [Lucas–Lehmer primality test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test)
