@@ -36,8 +36,8 @@ $n - 1$, which can be a nice time savings for large $n$.
 
 We can actually do even better than iterating from $2$ to $n / 2$ for
 potential divisors. The <em>trial division</em> algorithm says we can
-actually stop looking for potential divisors once we get to $\sqrt n$.
-The reduction from $n / 2$ to $\sqrt n$ is an exponential time savings
+actually stop looking for potential divisors once we get to $\sqrt{n}$.
+The reduction from $n / 2$ to $\sqrt{n}$ is an exponential time savings
 and becomes very significant for large $n$.
 
 No computations are done for $n < 4$, though this is a virtually
